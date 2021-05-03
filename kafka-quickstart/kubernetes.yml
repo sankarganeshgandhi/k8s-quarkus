@@ -23,6 +23,20 @@ spec:
     app.kubernetes.io/version: "1.0"
   type: NodePort
 ---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: kafka-quickstart
+  namespace: kafka-client
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /prices
+        backend:
+          serviceName: kafka-quickstart
+          servicePort: 8080
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
