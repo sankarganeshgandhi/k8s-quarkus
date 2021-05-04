@@ -4,8 +4,8 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/vcs-url" : "https://github.com/sankarganeshgandhi/k8s-quarkus.git",
-      "app.quarkus.io/build-timestamp" : "2021-05-03 - 19:25:56 +0000",
-      "app.quarkus.io/commit-id" : "37ea17ea8e16865c8c328044a4adb1f79d27f135"
+      "app.quarkus.io/build-timestamp" : "2021-05-04 - 09:59:50 +0000",
+      "app.quarkus.io/commit-id" : "fe37a2e80a49c98087bf0d918d15c7ffb51f4b2a"
     },
     "labels" : {
       "app.kubernetes.io/name" : "kafka-quickstart",
@@ -34,13 +34,13 @@
   "metadata" : {
     "annotations" : {
       "app.quarkus.io/vcs-url" : "https://github.com/sankarganeshgandhi/k8s-quarkus.git",
-      "app.quarkus.io/build-timestamp" : "2021-05-03 - 19:25:56 +0000",
-      "app.quarkus.io/commit-id" : "37ea17ea8e16865c8c328044a4adb1f79d27f135"
+      "app.quarkus.io/build-timestamp" : "2021-05-04 - 09:59:50 +0000",
+      "app.quarkus.io/commit-id" : "fe37a2e80a49c98087bf0d918d15c7ffb51f4b2a"
     },
     "labels" : {
       "app.kubernetes.io/name" : "kafka-quickstart",
-      "app.kubernetes.io/version" : "1.0",
-      "app.kubernetes.io/part-of" : "kubernetes-quickstart"
+      "app.kubernetes.io/part-of" : "kubernetes-quickstart",
+      "app.kubernetes.io/version" : "1.0"
     },
     "name" : "kafka-quickstart",
     "namespace" : "kafka-client"
@@ -50,21 +50,21 @@
     "selector" : {
       "matchLabels" : {
         "app.kubernetes.io/name" : "kafka-quickstart",
-        "app.kubernetes.io/version" : "1.0",
-        "app.kubernetes.io/part-of" : "kubernetes-quickstart"
+        "app.kubernetes.io/part-of" : "kubernetes-quickstart",
+        "app.kubernetes.io/version" : "1.0"
       }
     },
     "template" : {
       "metadata" : {
         "annotations" : {
           "app.quarkus.io/vcs-url" : "https://github.com/sankarganeshgandhi/k8s-quarkus.git",
-          "app.quarkus.io/build-timestamp" : "2021-05-03 - 19:25:56 +0000",
-          "app.quarkus.io/commit-id" : "37ea17ea8e16865c8c328044a4adb1f79d27f135"
+          "app.quarkus.io/build-timestamp" : "2021-05-04 - 09:59:50 +0000",
+          "app.quarkus.io/commit-id" : "fe37a2e80a49c98087bf0d918d15c7ffb51f4b2a"
         },
         "labels" : {
           "app.kubernetes.io/name" : "kafka-quickstart",
-          "app.kubernetes.io/version" : "1.0",
-          "app.kubernetes.io/part-of" : "kubernetes-quickstart"
+          "app.kubernetes.io/part-of" : "kubernetes-quickstart",
+          "app.kubernetes.io/version" : "1.0"
         },
         "namespace" : "kafka-client"
       },

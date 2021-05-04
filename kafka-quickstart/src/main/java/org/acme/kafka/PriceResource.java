@@ -1,6 +1,7 @@
 package org.acme.kafka;
 
-import io.smallrye.reactive.messaging.annotations.Channel;
+//import io.smallrye.reactive.messaging.annotations.Channel;
+import org.eclipse.microprofile.reactive.messaging.Channel;
 import org.reactivestreams.Publisher;
 
 import javax.inject.Inject;

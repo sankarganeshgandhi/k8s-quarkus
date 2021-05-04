@@ -16,12 +16,12 @@ public class PriceConverter {
 
     private static final double CONVERSION_RATE = 0.88;
 
-    @Incoming("prices")                                     
-    @Outgoing("my-data-stream")                             
-    @Broadcast                                              
-    @Acknowledgment(Acknowledgment.Strategy.PRE_PROCESSING) 
+    @Incoming("prices")
+    @Outgoing("my-data-stream")
+    @Broadcast
+    @Acknowledgment(Acknowledgment.Strategy.PRE_PROCESSING)
     public double process(int priceInUsd) {
-        return priceInUsd * CONVERSION_RATE;
+        double converetedPrice = priceInUsd * CONVERSION_RATE;
+        return converetedPrice;
     }
-
 }
