@@ -1,0 +1,54 @@
+# Configuration file
+quarkus:
+  kubernetes:
+    namespace: kafka-client
+    part-of: kubernetes-quickstart
+    image-pull-policy: Always
+    service-type: NodePort
+  container-image:
+    registry: docker.io
+    group: sankarganeshg
+    name: kafka-quickstart
+    tag: '2.1'
+    build: true
+    push: true
+mp:
+  messaging:
+    outgoing:
+      generated-price:
+        bootstrap:
+          servers: 10.96.106.72:9092
+        connector: smallrye-kafka
+        topic: prices
+        value:
+          serializer: org.apache.kafka.common.serialization.IntegerSerializer
+          health-readiness-enabled: false
+      producer1:
+        bootstrap:
+          servers: 10.96.165.221:9192
+        connector: smallrye-kafka
+        topic: topic1
+        value:
+          serializer: org.apache.kafka.common.serialization.StringSerializer
+        health-readiness-enabled: false
+    incoming:
+      prices:
+        bootstrap:
+          servers: 10.96.106.72:9092
+        connector: smallrye-kafka
+        topic: prices
+        value:
+          deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+        health-readiness-enabled: false
+      consumer1:
+        bootstrap:
+          servers: 10.96.165.221:9192
+        connector: smallrye-kafka
+        topic: topic1
+        value:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        health-readiness-enabled: false
+#Kafka Configuration
+#kafka:
+#  bootstrap:
+#    servers: localhost:9092
