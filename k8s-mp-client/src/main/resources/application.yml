@@ -1,0 +1,21 @@
+# Configuration file
+quarkus:
+  ssl:
+    native: true
+  smallrye-jwt:
+    enabled: false
+  kubernetes:
+    namespace: default
+    part-of: k8s-mp-client
+    image-pull-policy: Always
+    service-type: NodePort
+  container-image:
+    registry: docker.io
+    group: sankarganeshg
+    name: kafka-quickstart
+    tag: '2.1'
+    build: true
+    push: true
+injected:
+  value: Injected value
+value: lookup value

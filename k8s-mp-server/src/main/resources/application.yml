@@ -1,0 +1,14 @@
+# Configuration file
+quarkus:
+  kubernetes:
+    namespace: default
+    part-of: k8s-mp-server
+    image-pull-policy: Always
+    service-type: NodePort
+  container-image:
+    registry: docker.io
+    group: sankarganeshg
+    name: kafka-quickstart
+    tag: '2.1'
+    build: true
+    push: true
